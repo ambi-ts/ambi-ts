@@ -43,7 +43,9 @@
   },
   "homepage": "https://github.com/ambi-ts/ambi-ts#readme",
   "dependencies": {
+    "@joaqim/ecs": "file:../ecs",
     "canvas": "^2.8.0",
+    "primed-model": "^1.0.4",
     "reflect-metadata": "^0.1.13",
     "typescript": "^4.3.5"
   }
