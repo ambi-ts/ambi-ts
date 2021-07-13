@@ -1,0 +1,37 @@
+export declare class Vector2 {
+    private _point;
+    static readonly ZERO: Vector2;
+    static readonly zero: Vector2;
+    static readonly one: Vector2;
+    static readonly right: Vector2;
+    static readonly left: Vector2;
+    static readonly up: Vector2;
+    static readonly down: Vector2;
+    get Point(): Array<number>;
+    constructor(x: number, y: number);
+    constructor(args: any[]);
+    toString(): string;
+    get magnitude(): number;
+    normalize(): void;
+    static normalize(a: Vector2): Vector2;
+    distanceSquare(v: Vector2): number;
+    static distanceSquare(a: Vector2, b: Vector2): number;
+    static equals(a: Vector2, b: Vector2): boolean;
+    equals(v: Vector2): boolean;
+    static notEquals(a: Vector2, b: Vector2): boolean;
+    notEquals(v: Vector2): boolean;
+    static lessThan(a: Vector2, b: Vector2): boolean;
+    lessThan(v: Vector2): boolean;
+    static add(a: Vector2, b: Vector2): Vector2;
+    add(p: Vector2): Vector2;
+    static sub(a: Vector2, b: Vector2): Vector2;
+    sub(p: Vector2): Vector2;
+    static times(a: Vector2, b: Vector2): Vector2;
+    times(v: Vector2): Vector2;
+    static min(a: Vector2, b: Vector2): Vector2;
+    static max(a: Vector2, b: Vector2): Vector2;
+    get x(): number;
+    get y(): number;
+    set x(v: number);
+    set y(v: number);
+}

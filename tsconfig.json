@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "experimentalDecorators": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowJs": true,
+    "outDir": "lib",
+    "baseUrl": "src",
+    "paths": { "src/*": ["src/*"] },
+    "sourceMap": true,
+    "declaration": true,
+    "lib": ["DOM", "ESNext", "ESNext.Promise"],
+    "types": ["jest", "reflect-metadata"]
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"],
+  "typedocOptions": {
+    "out": "docs",
+    "entryPoints": "src/index.ts",
+    "exclude": ["**/*.spec.ts", "**/*.spec.tsx", "node_modules"]
+  }
+}
