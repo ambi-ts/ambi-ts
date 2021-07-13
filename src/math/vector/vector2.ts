@@ -1,38 +1,13 @@
 export class Vector2 {
-  private _point: Array<number>;
   public static readonly ZERO = new Vector2(0, 0);
-
   public static readonly zero = new Vector2(0, 0);
   public static readonly one = new Vector2(1, 1);
-
   public static readonly right = new Vector2(1, 0);
   public static readonly left = new Vector2(-1, 0);
-
   public static readonly up = new Vector2(0, 1);
   public static readonly down = new Vector2(0, -1);
 
-  public get Point(): Array<number> {
-    return this._point;
-  }
-
-  public constructor(x: number, y: number);
-  //public constructor(vector: Vector2);
-  public constructor(args: any[]);
-
-  public constructor(...args: any[]) {
-    if (args.length === 0) {
-      throw new Error("Point (x, y) missing in Vector2 constructor.");
-    }
-    let arg = args[0];
-    if (Array.isArray(arg)) {
-      if (arg.length < 2) {
-        throw new Error("Minimum number of dimensions is 2.");
-      }
-      this._point = arg;
-    } else {
-      this._point = args;
-    }
-  }
+  public constructor(public x: number, public y: number) {}
 
   public toString(): string {
     return "[Vector2]" + this.x + "," + this.y;
@@ -42,14 +17,15 @@ export class Vector2 {
     return Math.sqrt(this.x * this.x + this.y * this.y);
   }
 
-  public normalize() {
-    var magnitude = this.magnitude;
+  public normalize(): Vector2 {
+    const magnitude = this.magnitude;
     this.x /= magnitude;
     this.y /= magnitude;
+    return this;
   }
 
   public static normalize(a: Vector2): Vector2 {
-    var magnitude = a.magnitude;
+    const magnitude = a.magnitude;
     return new Vector2(a.x / magnitude, a.y / magnitude);
   }
 
@@ -60,8 +36,8 @@ export class Vector2 {
   }
 
   public static distanceSquare(a: Vector2, b: Vector2): number {
-    var cx = b.x - a.x;
-    var cy = b.y - a.y;
+    const cx = b.x - a.x;
+    const cy = b.y - a.y;
     return cx * cx + cy * cy;
   }
 
@@ -98,7 +74,7 @@ export class Vector2 {
     return new Vector2(this.x - p.x, this.y - p.y);
   }
 
-  public static times(a: Vector2, b: Vector2) {
+  public static times(a: Vector2, b: Vector2): Vector2 {
     return a.times(b);
   }
   public times(v: Vector2): Vector2 {
@@ -110,18 +86,5 @@ export class Vector2 {
   }
   public static max(a: Vector2, b: Vector2): Vector2 {
     return new Vector2(Math.max(a.x, b.x), Math.max(a.y, b.y));
-  }
-
-  public get x(): number {
-    return this._point[0];
-  }
-  public get y(): number {
-    return this._point[1];
-  }
-  public set x(v: number) {
-    this._point[0] = v;
-  }
-  public set y(v: number) {
-    this._point[1] = v;
   }
 }

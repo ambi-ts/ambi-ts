@@ -9,7 +9,7 @@ export class Polygon {
     return Math.abs(this.signedDoubleArea() * 0.5);
   }
   polyWinding(): Winding {
-    var signedDoubleArea = this.signedDoubleArea();
+    const signedDoubleArea = this.signedDoubleArea();
     if (signedDoubleArea < 0) {
       return Winding.CLOCKWISE;
     }
@@ -19,14 +19,14 @@ export class Polygon {
     return Winding.NONE;
   }
   private signedDoubleArea(): number {
-    var nextIndex: number;
-    var n = this.vertices.size;
-    var signedDoubleArea = 0;
+    let nextIndex: number;
+    const n = this.vertices.size;
+    let signedDoubleArea = 0;
 
-    for (var index = 0; index < n; index++) {
+    for (let index = 0; index < n; index++) {
       nextIndex = (index + 1) % n;
-      var point = this.vertices.get(index);
-      var next = this.vertices.get(nextIndex);
+      const point = this.vertices.get(index);
+      const next = this.vertices.get(nextIndex);
       signedDoubleArea += point.x * next.y - next.x * point.y;
     }
 

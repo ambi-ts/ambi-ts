@@ -5,7 +5,7 @@ export class List<T> {
     this.items = items;
   }
 
-  clear() {
+  clear(): void {
     this.items = [];
   }
 
@@ -33,7 +33,7 @@ export class List<T> {
   }
 
   findAll(callback: (item: T) => boolean): List<T> {
-    var list = new List<T>();
+    const list = new List<T>();
     list.items = this.items.filter((item: T) => callback(item));
     return list;
   }
