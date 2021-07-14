@@ -55,7 +55,7 @@
   },
   "homepage": "https://github.com/ambi-ts/ambi-ts#readme",
   "dependencies": {
-    "@joaqim/ecs": "^1.1.4",
+    "@joaqim/ecs": "github:joaqim/ecs",
     "babel-plugin-transform-typescript-metadata": "^0.3.2",
     "canvas": "^2.8.0",
     "primed-model": "^1.0.4",
