@@ -1,5 +1,6 @@
 export declare class Vector2 {
-    private _point;
+    x: number;
+    y: number;
     static readonly ZERO: Vector2;
     static readonly zero: Vector2;
     static readonly one: Vector2;
@@ -7,12 +8,10 @@ export declare class Vector2 {
     static readonly left: Vector2;
     static readonly up: Vector2;
     static readonly down: Vector2;
-    get Point(): Array<number>;
     constructor(x: number, y: number);
-    constructor(args: any[]);
     toString(): string;
     get magnitude(): number;
-    normalize(): void;
+    normalize(): Vector2;
     static normalize(a: Vector2): Vector2;
     distanceSquare(v: Vector2): number;
     static distanceSquare(a: Vector2, b: Vector2): number;
@@ -30,8 +29,4 @@ export declare class Vector2 {
     times(v: Vector2): Vector2;
     static min(a: Vector2, b: Vector2): Vector2;
     static max(a: Vector2, b: Vector2): Vector2;
-    get x(): number;
-    get y(): number;
-    set x(v: number);
-    set y(v: number);
 }
