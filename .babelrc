@@ -1,0 +1,26 @@
+{
+  "presets": ["@babel/env", "@babel/typescript"],
+  "plugins": [
+    "babel-plugin-transform-typescript-metadata",
+    ["@babel/plugin-proposal-decorators", { "legacy": true }],
+    ["@babel/plugin-proposal-class-properties", { "loose" : true }],
+    ["@babel/plugin-proposal-private-methods", { "loose": true }],
+    ["module-resolver", {
+      "root": ["."],
+      "alias": {
+        "@root": "./src",
+        "@game/*": "./src/game/*",
+        "@utils/*": "./src/utils/*",
+        "@math/*": "./src/math/*",
+
+        "@game": "./src/game",
+        "@utils": "./src/utils",
+        "@math": "./src/math"
+      }
+    }]
+  ],
+  "ignore": [
+    "**/*.spec.ts",
+    "**/*.spec.tsx",
+  ]
+}
