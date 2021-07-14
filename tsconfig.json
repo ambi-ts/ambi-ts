@@ -12,13 +12,23 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "allowJs": true,
-    "outDir": "lib",
-    "baseUrl": "src",
-    "paths": { "src/*": ["src/*"] },
+    "outDir": "./lib",
+    "rootDir": "./src",
+    "baseUrl": ".",
+    "paths": {
+      "@root/*": ["src/*"],
+      "@utils/*": ["src/utils/*"],
+      "@game/*": ["src/game/*"],
+      "@math/*": ["src/math/*"],
+
+      "@utils": ["src/utils"],
+      "@game": ["src/game"],
+      "@math": ["src/math"]
+    },
     "sourceMap": true,
     "declaration": true,
     "lib": ["DOM", "ESNext", "ESNext.Promise"],
-    "types": ["jest", "reflect-metadata"]
+    "types": ["jest", "reflect-metadata", "node"]
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules"],

@@ -1,5 +1,5 @@
-import { Vector2 } from "math";
-import { List } from "utils";
+import { Vector2 } from "@math";
+import { List } from "@utils";
 import { Winding } from ".";
 
 export class Polygon {
