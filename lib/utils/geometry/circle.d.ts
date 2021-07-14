@@ -1,4 +1,4 @@
-import { Vector2 } from "math/vector";
+import { Vector2 } from "@math/vector";
 export declare class Circle {
     center: Vector2;
     radius: number;

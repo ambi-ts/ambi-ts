@@ -1,4 +1,4 @@
-import { Vector2 } from "math";
+import { Vector2 } from "@math";
 export declare class Rect {
     x: number;
     y: number;
