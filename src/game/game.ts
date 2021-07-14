@@ -3,6 +3,7 @@ import { Base, Model, Primed } from "primed-model";
 
 const PrimedEngine = (engine: Engine) => {
   if (engine === undefined) return new Engine();
+  return engine;
 };
 
 @Model

@@ -8,14 +8,14 @@ const moduleNameMapper = pathsToModuleNameMapper(compilerOptions.paths, {
 });
 module.exports = {
   preset: "ts-jest",
-  testEnvironment: "node",
+  testEnvironment: "jsdom",
   roots: ["<rootDir>/src"],
   testMatch: [
     "**/__tests__/**/*.+(ts|tsx|js)",
     "**/?(*.)+(spec|test).+(ts|tsx|js)",
   ],
   transform: {
-    "^.+\\.(t|j)s$": "ts-jest",
+    "^.+\\.(js|jsx|ts|tsx)$": "ts-jest",
   },
   moduleNameMapper,
   modulePaths: ["<rootDir>/src"],

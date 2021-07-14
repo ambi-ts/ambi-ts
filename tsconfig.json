@@ -12,18 +12,16 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "allowJs": true,
-    "outDir": "./lib",
-    "rootDir": "./src",
-    "baseUrl": ".",
+    "outDir": "lib",
+    "baseUrl": "src",
     "paths": {
-      "@root/*": ["src/*"],
-      "@utils/*": ["src/utils/*"],
-      "@game/*": ["src/game/*"],
-      "@math/*": ["src/math/*"],
+      "@utils/*": ["./utils/*"],
+      "@game/*": ["./game/*"],
+      "@math/*": ["./math/*"],
 
-      "@utils": ["src/utils"],
-      "@game": ["src/game"],
-      "@math": ["src/math"]
+      "@utils": ["./utils"],
+      "@game": ["./game"],
+      "@math": ["./math"]
     },
     "sourceMap": true,
     "declaration": true,
